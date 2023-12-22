@@ -1,0 +1,34 @@
+﻿namespace CadastroFilmes.Domain.Entities;
+
+public class Filme
+{
+
+
+    public int Id { get; set; }
+    public string Nome { get; set; }
+    public string Genero { get; set; }
+
+
+
+    public Filme()
+    {
+    }
+
+    public Filme(int id, string nome, string genero)
+        : this(nome, genero)
+    {
+        Id = id;
+
+    }
+    public Filme(string nome, string genero)
+        : this(nome)
+    {
+
+        Genero = genero;
+    }
+
+    public Filme(string nome)
+    {
+        Nome = nome;
+    }
+}
